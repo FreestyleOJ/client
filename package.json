@@ -1,0 +1,23 @@
+{
+  "name": "foj-client",
+  "version": "0.0.0",
+  "description": "FOJ-Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreestyleOJ/FOJ-Client.git"
+  },
+  "keywords": [
+    "FreestyleOJ",
+    "client"
+  ],
+  "author": "sirius.caffrey@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FreestyleOJ/FOJ-Client/issues"
+  },
+  "homepage": "https://github.com/FreestyleOJ/FOJ-Client#readme"
+}
