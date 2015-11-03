@@ -24,5 +24,6 @@
   "devDependencies": {
     "electron-packager": "^5.1.1",
     "electron-prebuilt": "^0.34.2"
-  }
+  },
+  "preferGlobal":true
 }
