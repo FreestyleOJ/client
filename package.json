@@ -1,5 +1,5 @@
 {
-  "name": "foj-client",
+  "name": "foj",
   "version": "0.0.0",
   "description": "FOJ-Client",
   "main": "index.js",
