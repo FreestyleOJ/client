@@ -1,2 +1,2 @@
-# FOJ-client
-FOJ client
+# FOJ-Client
+FOJ Client
