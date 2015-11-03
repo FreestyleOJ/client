@@ -31,3 +31,7 @@ foj-linux-x64
 
 # Zip files
 *.zip
+
+# Other Directories
+template-app
+
