@@ -16,5 +16,7 @@ npm start
 ```
 # LICENSE
 
-MIT
+//MIT
+
+Editing License
 
