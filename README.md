@@ -2,6 +2,8 @@
 
 FOJ Client
 
+[![Build](https://travis-ci.org/FreestyleOJ/FOJ-Client.svg?branch=master)](htts://travis-ci.org/FreestyleOJ/FOJ-Client/builds)
+
 # Installing
 
 ```bash
