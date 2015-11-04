@@ -8,6 +8,6 @@ branches:
 before_install:
     - "npm install ."
 script:
-    - "la"
+    - "ls"
 notification:
   email: "sirius.caffrey@gmail.com"
