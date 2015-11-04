@@ -29,7 +29,7 @@ app.on('ready', function() {
   console.log('Running!');
   console.log('Loaded Url ' + 'file://' + __dirname + '/index.html');
   // Open the DevTools.
-  mainWindow.openDevTools();
+  //mainWindow.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
