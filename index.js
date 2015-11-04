@@ -27,6 +27,7 @@ app.on('ready', function() {
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
   // mainWindow.loadUrl('http://24oj.cf');
   console.log('Running!');
+  console.log('Loaded Url ' + 'file://' + __dirname + '/index.html');
   // Open the DevTools.
   mainWindow.openDevTools();
 
