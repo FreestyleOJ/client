@@ -23,7 +23,7 @@
   "homepage": "https://github.com/FreestyleOJ/FOJ-Client#readme",
   "devDependencies": {
     "electron-packager": "^5.1.1",
-    "electron-prebuilt": "^0.34.2"
+    "electron-prebuilt": "^0.34.3"
   },
-  "preferGlobal":true
+  "preferGlobal": true
 }
