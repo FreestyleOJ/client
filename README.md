@@ -1,8 +1,6 @@
-# FOJ-Client
+# FOJ-Client [![LICENSE](https://img.shields.io/github/license/FreestyleOJ/FOJ-Client.svg?style=flat-square)](https://github.com/FreestyleOJ/FOJ-Client/blob/master/LICENSE) [![Build](https://img.shields.io/travis/FreestyleOJ/FOJ-Client/master.svg?style=flat-square)](https://travis-ci.org/FreestyleOJ/FOJ-Client/builds)
 
 FOJ Client
-
-[![Build](https://travis-ci.org/FreestyleOJ/FOJ-Client.svg?branch=master)](htts://travis-ci.org/FreestyleOJ/FOJ-Client/builds)
 
 # Installing
 
