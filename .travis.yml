@@ -2,15 +2,15 @@ language: node_js
 node_js:
     - "4.1"
     - "5.0"
-branches:
-  only:
-    - master
 before_install:
     - npm install .
 install:
     - npm install -g codecov
 script:
     - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec
+    - cat coverage/lcov.info
+    bash <(curl -s https://codecov.io/bash) -d
     - codecov
 notification:
   email: "sirius.caffrey@gmail.com"
+
