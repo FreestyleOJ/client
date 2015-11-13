@@ -13,3 +13,4 @@ script:
     - codecov
 notification:
   email: "sirius.caffrey@gmail.com"
+
