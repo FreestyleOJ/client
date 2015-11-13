@@ -1,8 +1,8 @@
 {
   "name": "foj",
-  "version": "0.1.0",
+  "version": "0.2.5",
   "description": "FOJ-Client",
-  "main": "./bin/index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
