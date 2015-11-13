@@ -3,6 +3,9 @@ var BrowserWindow = require('browser-window');  // Module to create native brows
 
 // Report crashes to our server.
 require('crash-reporter').start();
+// Add Static Files
+require('module').globalPaths.push(__dirname + '/node_modules');
+require('module').globalPaths.push(__dirname + '/assets');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -21,18 +24,19 @@ app.on('window-all-closed', function() {
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({width: 1024, height: 768});
 
   // and load the index.html of the app.
-  mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  mainWindow.loadUrl('file://' + __dirname + '/bin/index.html');
   // mainWindow.loadUrl('http://24oj.cf');
   console.log('Running!');
-  console.log('Loaded Url ' + 'file://' + __dirname + '/index.html');
+  console.log('Loaded Url ' + 'file://' + __dirname + '/bin/index.html');
   // Open the DevTools.
-  //mainWindow.openDevTools();
+  mainWindow.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
+    console.log('Bye~');
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.

@@ -1,226 +1,236 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-
-    <title>Dashboard of FOJ-Client</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="index.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="FOJ!">
+    <title>Dashboard - FOJ</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="../images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../images/favicon/mstile-144x144.png">
+    <link rel="icon" href="../images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="../css/prism.css" rel="stylesheet">
+    <link rel='stylesheet' href='../css/gmail-scrollbar.css' type='text/css' media='screen' />
+    <link href="../css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Need Network Here! -->
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- End GoogleApis -->
+    <script>
+      window.$ = window.jQuery = require('../assets/jquery/jquery-2.1.4.min.js');
+      window.Hammer = require('../assets/hammer/hammer.min.js');
+    </script>
+    <script src="../js/live.js"></script>
+    <script src="../assets/materialize/js/materialize.min.js"></script>
+    <link href="../assets/materialize/css/materialize.min.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">FOJ-Client</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="help.html">Help</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="http://noi.openjudge.cn">NOI-Openjudge</a></li>
-            <li><a href="status.html">Status</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
+    <header>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="https://github.com/FreestyleOJ" class="brand-logo">
+            <object id="front-page-logo" type="image/svg+xml" data="../res/materialize.svg">Your browser does not support SVG</object></a></li>
+        <li class="search">
+          <div class="search-wrapper card">
+            <input id="search"><i class="material-icons">search</i>
+            <div class="search-results"></div>
           </div>
+        </li>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="bold"><a href="https://github.com/FreestyleOJ" class="waves-effect waves-teal">Getting Started</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal">CSS</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="https://github.com/FreestyleOJ">Color</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Grid</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Helpers</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Media</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Sass</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Shadow</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Table</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Typography</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="https://github.com/FreestyleOJ">Badges</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Buttons</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Breadcrumbs</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Cards</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Chips</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Collections</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Footer</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Forms</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Icons</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Navbar</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Pagination</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Preloader</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal">JavaScript</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="https://github.com/FreestyleOJ">Collapsible</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Dialogs</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Dropdown</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Media</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Modals</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Parallax</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Pushpin</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">ScrollFire</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Scrollspy</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">SideNav</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Tabs</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Transitions</a></li>
+                  <li><a href="https://github.com/FreestyleOJ">Waves</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="bold"><a href="https://github.com/FreestyleOJ" class="waves-effect waves-teal">Mobile</a></li>
+        <li class="bold"><a href="https://github.com/FreestyleOJ" class="waves-effect waves-teal">Showcase</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <h1 class="header center-on-small-only">FOJ</h1>
+          <div class='row center'>
+            <h4 class ="header col s12 light center">A Best Online Judging Design</h4>
+          </div>
+          <div class="row center">
+            <a href="https://github.com/FreestyleOJ" id="download-button" class="btn-large waves-effect waves-light">Get Started</a>
+          </div>
+          <div class="row center"><a class="red-text text-lighten-4" href="https://github.com/FreestyleOJ">alpha release v0.5.0</a></div>
 
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="buysellads-header row center">
+          <!-- ADs here -->
+          </div>
+          <br>
+
+        </div>
+        <div class="github-commit">
+          <div class="container">
+            <div class="commit">
+              Latest Commit on Github:
+              &nbsp;&nbsp;
+              <a href="" class="sha"></a>
+              &nbsp;&nbsp;
+              <span class="date"></span>
+              <a id="github-button" href="https://github.com/FreestyleOJ" class="btn-flat right grey-text text-lighten-5 waves-effect waves-light hide-on-small-only">Github</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/jquery/jquery-2.1.4.min.js"></script>
-    <script src="../assets/bootstrap/bootstrap.min.js"></script>
+      <div class="container">
+        <div class="section">
+
+          <div class="row">
+            <div class="col s12 m8 offset-m2">
+              <br>
+              <img id="responsive-img" src="../images/responsive.png">
+            </div>
+          </div>
+
+          <div class="row">
+            <h3 class="col s12 light center header">FOJ simplifies life</h3>
+          </div>
+
+          <!--   Promo Section   -->
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="center promo">
+                <i class="material-icons">flash_on</i>
+                <p class="promo-caption">Speeds up development</p>
+                <p class="light center">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="center promo">
+                <i class="material-icons">group</i>
+                <p class="promo-caption">User Experience Focused</p>
+                <p class="light center">We were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="center promo">
+                <i class="material-icons">settings</i>
+                <p class="promo-caption">Easy to work with</p>
+                <p class="light center">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about FOJ.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <div class="row center">
+            <h3 class="light header">FOJ Showcase</h3>
+            <p class="col s8 offset-s2 caption">Checkout what people are creating with FOJ. Get inspired by these and you can even submit your own website to be showcased here.</p>
+            <a href="https://github.com/FreestyleOJ" class="btn-large waves-effect waves-light">Explore our Showcase</a>
+          </div>
+        </div>
+      </div>
+
+
+    </main>    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l4 s12">
+            <h5 class="white-text">Help FOJ Grow</h5>
+            <p class="grey-text text-lighten-4">We hope you have enjoyed using FOJ! If you feel FOJ has helped you out and want to support the team, send us over a donation! Any amount would help support and continue development on this project and is greatly appreciated.</p>
+            <form id="paypal-donate" action="https://github.com/FreestyleOJr" method="post" target="_top">
+<button class="btn waves-effect waves-light red lighten-3" type="submit" name="action" alt="PayPal - The safer, easier way to pay online!">Donate Now
+</button>
+</form>
+
+          </div>
+          <div class="col l4 s12">
+            <h5 class="white-text">Join the Discussion</h5>
+            <p class="grey-text text-lighten-4">We have a Gitter chat room set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
+            <a class="btn waves-effect waves-light red lighten-3" target="_blank" href="https://github.com/FreestyleOJ">Chat</a>
+          </div>
+          <div class="col l4 s12" style="overflow: hidden;">
+            <h5 class="white-text">Connect</h5>
+            <iframe src="http://ghbtns.com/github-btn.html?user=FreestyleOJ&repo=FOJ-Client&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+            <br>
+            <a href="https://github.com/FreestyleOJ" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">Follow @FOJ</a>
+            <br>
+            <div class="g-follow" data-annotation="bubble" data-height="24" data-href="https://github.com/FreestyleOJ" data-rel="publisher"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2015-2015 FreestyleOJ, All rights reserved.
+        <a class="grey-text text-lighten-4 right" href="https://github.com/FreestyleOJ/FOJ-Client/blob/master/LICENSE">MIT License</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/jquery.timeago.min.js"></script>
+    <script src="../js/prism.js"></script>
+    <script src="../jade/lunr.min.js"></script>
+    <script src="../jade/search.js"></script>
+    <script src="../js/init.js"></script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!-- Google Plus Button-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </body>
 </html>

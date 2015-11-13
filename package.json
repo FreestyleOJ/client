@@ -1,8 +1,8 @@
 {
   "name": "foj",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "description": "FOJ-Client",
-  "main": "./bin/index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
@@ -22,8 +22,11 @@
   },
   "homepage": "https://github.com/FreestyleOJ/FOJ-Client#readme",
   "devDependencies": {
+    "codecov.io": "^0.1.6",
     "electron-packager": "^5.1.1",
-    "electron-prebuilt": "^0.34.3"
+    "electron-prebuilt": "^0.34.3",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3"
   },
   "preferGlobal": true
 }

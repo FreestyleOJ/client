@@ -1,4 +1,4 @@
-# FOJ-Client [![LICENSE](https://img.shields.io/github/license/FreestyleOJ/FOJ-Client.svg?style=flat-square)](https://github.com/FreestyleOJ/FOJ-Client/blob/master/LICENSE) [![Build](https://img.shields.io/travis/FreestyleOJ/FOJ-Client/master.svg?style=flat-square)](https://travis-ci.org/FreestyleOJ/FOJ-Client/builds)
+# FOJ-Client [![Build](https://travis-ci.org/FreestyleOJ/FOJ-Client.svg?branch=master)](htts://travis-ci.org/FreestyleOJ/FOJ-Client/builds) [![codecov.io](https://codecov.io/github/FreestyleOJ/FOJ-Client/coverage.svg?branch=master)](https://codecov.io/github/FreestyleOJ/FOJ-Client?branch=master)[![Join the chat at https://gitter.im/FreestyleOJ/FOJ-Client](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/FreestyleOJ/FOJ-Client?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 FOJ Client
 
