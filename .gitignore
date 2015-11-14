@@ -33,4 +33,4 @@ foj-linux-x64
 *.zip
 
 # Other Directories
-
+*.md~
