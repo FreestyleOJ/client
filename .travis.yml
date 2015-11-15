@@ -6,11 +6,12 @@ branches:
   only:
     - master
 before_install:
-    - npm install .
+    - npm install
 install:
     - npm install -g codecov
 script:
     - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec
-    - codecov
+after_success:
+    - npm run codecov
 notification:
   email: "sirius.caffrey@gmail.com"
