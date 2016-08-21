@@ -26,7 +26,7 @@
     "codecov.io": "^0.1.6",
     "electron-packager": "^5.1.1",
     "electron-prebuilt": "^0.34.3",
-    "istanbul": "^0.4.0",
+    "istanbul": "^0.4.5",
     "mocha": "^2.3.3"
   },
   "preferGlobal": true
