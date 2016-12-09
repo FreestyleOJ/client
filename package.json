@@ -24,7 +24,7 @@
   "homepage": "https://github.com/FreestyleOJ/FOJ-Client#readme",
   "devDependencies": {
     "codecov.io": "^0.1.6",
-    "electron-packager": "^5.1.1",
+    "electron-packager": "^8.4.0",
     "electron-prebuilt": "^0.34.3",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.3"
